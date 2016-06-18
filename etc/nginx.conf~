@@ -4,15 +4,19 @@ server {
   #server_name localhost;
   
   location ^~ /uploads/ {
-    root /home/mikhail/projects/stepic-smal-web/web;
+    root /home/box/web;
+  }
+
+  location ^~ /hello/ {
+    proxy_pass http://127.0.0.1:8080;
   }
   
   location ~ \.[^/]*$ {
-    root /home/mikhail/projects/stepic-smal-web/web/public;
+    root /home/box/web/public;
   }
 
-  #location / {
-  #  return 404;
-  #}
+  location / {
+    return 404;
+  }
 }
 
