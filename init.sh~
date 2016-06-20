@@ -23,5 +23,8 @@ gunicorn -c /etc/gunicorn.d/hello.py hello:application
 #sudo /etc/init.d/gunicorn restart
 #
 # test gunicorn settings with curl
-# curl -vv "http://127.0.0.1/hello/?a=b&a=1&b=2;"
-# curl -vv "http://localhost:8080/?a=b&a=1&b=2;"
+# curl -I http://127.0.0.1/hello/?a=b﻿
+# curl -vv http://127.0.0.1/hello/?a=b&a=1&b=2;
+# curl -I http://localhost:8080/?a=b
+
+
